@@ -56,14 +56,14 @@ if (isset($_SESSION["a"])) {
                         ?>
 
                         <tr>
-                            <td><?php echo $d["id"] ?></td>
-                            <td><?php echo $d["name"] ?></td>
-                            <td><?php echo $d["brand_name"] ?></td>
-                            <td><?php echo $d["cat_name"] ?></td>
-                            <td><?php echo $d["color_name"] ?></td>
-                            <td><?php echo $d["series_name"] ?></td>
-                            <td><?php echo $d["description"] ?></td>
-                            <td><img src="../<?php echo $d["path"] ?>" height="50" /></td>
+                            <td><?php echo e($d["id"]) ?></td>
+                            <td><?php echo e($d["name"]) ?></td>
+                            <td><?php echo e($d["brand_name"]) ?></td>
+                            <td><?php echo e($d["cat_name"]) ?></td>
+                            <td><?php echo e($d["color_name"]) ?></td>
+                            <td><?php echo e($d["series_name"]) ?></td>
+                            <td><?php echo e($d["description"]) ?></td>
+                            <td><img src="../<?php echo e($d["path"]) ?>" height="50" /></td>
                         </tr>
 
                         <?php

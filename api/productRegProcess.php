@@ -1,8 +1,9 @@
-﻿<?php
+<?php
 
 require_once __DIR__ . "/../includes/adminAuth.php";
 
 include_once __DIR__ . "/../includes/connection.php";
+require_once __DIR__ . "/../includes/uploadHelper.php";
 
 $pname = $_POST["pname"];
 $brand = $_POST["brand"];
@@ -30,13 +31,16 @@ if (empty($pname)) {
         echo ("Product has been already registered");
     } else {
 
-        $path = "assets/img/productImg/" . uniqid() . ".png";
-        move_uploaded_file($_FILES["image"]["tmp_name"], __DIR__ . "/../" . $path);
+        $upload = saveUploadedImage("image", "assets/img/productImg");
+        if (!$upload["ok"]) {
+            echo ($upload["error"]);
+        } else {
+            $path = $upload["path"];
+            Database::iud("INSERT INTO `product` (`name`, `description`, `path`, `brand_brand_id`, `category_cat_id`, `color_color_id`, `series_series_id`)
+            VALUES ('" . $pname . "', '" . $desc . "', '" . $path . "', '" . $brand . "', '" . $cat . "', '" . $color . "', '" . $series . "')");
 
-        Database::iud("INSERT INTO `product` (`name`, `description`, `path`, `brand_brand_id`, `category_cat_id`, `color_color_id`, `series_series_id`)
-        VALUES ('" . $pname . "', '" . $desc . "', '" . $path . "', '" . $brand . "', '" . $cat . "', '" . $color . "', '" . $series . "')");
-
-        echo ("Success");
+            echo ("Success");
+        }
     }
 }
 

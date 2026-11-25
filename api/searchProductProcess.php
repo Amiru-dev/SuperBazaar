@@ -102,10 +102,10 @@ if ($num2 == 0) {
         <!-- card -->
         <div class="card" style="width: 360px">
             <div class="a13">
-                <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src="<?php echo $d["path"]; ?>"
+                <a href="singleProductView.php?s=<?php echo e($d["stock_id"]) ?>"><img src="<?php echo e($d["path"]); ?>"
                         class="card-img-top mt-3"></a>
                 <div class="card-body">
-                    <h5 class="card-title text-center"><?php echo $d["name"]; ?></h5>
+                    <h5 class="card-title text-center"><?php echo e($d["name"]); ?></h5>
                     <p class="card-text text-center mt-4"><?php
                     if ($d["category_cat_id"] == 1) {
                         echo ("- LAPTOP -");
@@ -147,7 +147,7 @@ if ($num2 == 0) {
                         echo ("- GAMING CHAIRS -");
                     }
                     ?></p>
-                    <h3 class="card-text text-center mt-4 mb-2"><?php echo $d["price"]; ?> LKR</h3>
+                    <h3 class="card-text text-center mt-4 mb-2"><?php echo e($d["price"]); ?> LKR</h3>
                 </div>
             </div>
 

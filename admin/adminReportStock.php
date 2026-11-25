@@ -48,10 +48,10 @@ if (isset($_SESSION["a"])) {
                         ?>
 
                         <tr>
-                            <td><?php echo $d["stock_id"] ?></td>
-                            <td><?php echo $d["name"] ?></td>
-                            <td><?php echo $d["qty"] ?></td>
-                            <td><?php echo $d["price"] ?></td>
+                            <td><?php echo e($d["stock_id"]) ?></td>
+                            <td><?php echo e($d["name"]) ?></td>
+                            <td><?php echo e($d["qty"]) ?></td>
+                            <td><?php echo e($d["price"]) ?></td>
                         </tr>
 
                         <?php

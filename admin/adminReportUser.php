@@ -51,12 +51,12 @@ if (isset($_SESSION["a"])) {
                         ?>
 
                         <tr>
-                            <td><?php echo $d["id"] ?></td>
-                            <td><?php echo $d["fname"] ?></td>
-                            <td><?php echo $d["lname"] ?></td>
-                            <td><?php echo $d["email"] ?></td>
-                            <td><?php echo $d["mobile"] ?></td>
-                            <td><?php echo $d["type"] ?></td>
+                            <td><?php echo e($d["id"]) ?></td>
+                            <td><?php echo e($d["fname"]) ?></td>
+                            <td><?php echo e($d["lname"]) ?></td>
+                            <td><?php echo e($d["email"]) ?></td>
+                            <td><?php echo e($d["mobile"]) ?></td>
+                            <td><?php echo e($d["type"]) ?></td>
                             <td><?php
                             if ($d["status"] == "1") {
                                 echo ("Active");

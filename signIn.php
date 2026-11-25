@@ -123,12 +123,12 @@
         <div class="mt-3">
             <label class="form-label text-light">Username</label>
             <input type="text" class="form-control" required placeholder="Enter your username" id="un"
-                value="<?php echo $username ?>" />
+                value="<?php echo htmlspecialchars($username, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8") ?>" />
         </div>
         <div class="mt-3">
             <label class="form-label text-light">Password</label>
             <input type="password" class="form-control" required placeholder="Enter your password"
-                id="pw" value="<?php echo $password ?>" />
+                id="pw" value="<?php echo htmlspecialchars($password, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8") ?>" />
         </div>
         <div class="mt-2 mb-2 d-flex align-items-center gap-2">
             <input type="checkbox" class="form-check-input" id="rm" />

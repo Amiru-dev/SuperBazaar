@@ -95,23 +95,23 @@ if ($num2 == 0) {
         <!-- card -->
         <div class="card" style="width: 360px">
             <div class="a13">
-                <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>"><img src="<?php echo $d["path"]; ?>"
+                <a href="singleProductView.php?s=<?php echo e($d["stock_id"]) ?>"><img src="<?php echo e($d["path"]); ?>"
                         class="card-img-top mt-3"></a>
                 <div class="card-body">
-                    <h5 class="card-title text-center"><?php echo $d["name"]; ?></h5>
+                    <h5 class="card-title text-center"><?php echo e($d["name"]); ?></h5>
                     <p class="card-text text-center mt-4">- <?php echo strtoupper($d["cat_name"]); ?> -</p>
-                    <h3 class="card-text text-center mt-4 mb-2"><?php echo $d["price"]; ?> LKR</h3>
+                    <h3 class="card-text text-center mt-4 mb-2"><?php echo e($d["price"]); ?> LKR</h3>
                 </div>
             </div>
             <div class="justify-content-center mt-2">
-                <button class="btn btn-outline-info col-12 mb-2" onclick="addtoWishlist('<?php echo $d['stock_id'] ?>');">Add to
+                <button class="btn btn-outline-info col-12 mb-2" onclick="addtoWishlist('<?php echo e($d['stock_id']) ?>');">Add to
                     Wishlist</button>
 
-                <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>">
+                <a href="singleProductView.php?s=<?php echo e($d["stock_id"]) ?>">
                     <button class="btn btn-outline-light col-12 mb-2">Add to Cart</button>
                 </a>
 
-                <a href="singleProductView.php?s=<?php echo $d["stock_id"] ?>">
+                <a href="singleProductView.php?s=<?php echo e($d["stock_id"]) ?>">
                     <button class="btn btn-outline-warning col-12 mb-2">Buy Now</button>
                 </a>
             </div>

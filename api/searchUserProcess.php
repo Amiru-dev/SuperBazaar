@@ -18,19 +18,19 @@ if ($num > 0) {
         <tr>
             <th scope="row"><?php
 
-require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["id"] ?></th>
+require_once __DIR__ . "/../includes/adminAuth.php"; echo e($d["id"]) ?></th>
             <td><?php
 
-require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["fname"] ?></td>
+require_once __DIR__ . "/../includes/adminAuth.php"; echo e($d["fname"]) ?></td>
             <td><?php
 
-require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["lname"] ?></td>
+require_once __DIR__ . "/../includes/adminAuth.php"; echo e($d["lname"]) ?></td>
             <td><?php
 
-require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["email"] ?></td>
+require_once __DIR__ . "/../includes/adminAuth.php"; echo e($d["email"]) ?></td>
             <td><?php
 
-require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["mobile"] ?></td>
+require_once __DIR__ . "/../includes/adminAuth.php"; echo e($d["mobile"]) ?></td>
             <td><?php
 
 require_once __DIR__ . "/../includes/adminAuth.php";

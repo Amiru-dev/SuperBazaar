@@ -42,7 +42,7 @@ if (isset($_SESSION["u"])) {
                         <img src="<?php
 
                         if (!empty($d["img_path"])) {
-                            echo $d["img_path"];
+                            echo e($d["img_path"]);
 
                         } else {
                             echo ("assets/img/profile.png");
@@ -71,30 +71,30 @@ if (isset($_SESSION["u"])) {
                     <div class="row mt-4">
                         <div class="col-6">
                             <label for="" class="form-label">First Name :</label>
-                            <input type="text" class="form-control" value="<?php echo $d["fname"] ?>" id="fname">
+                            <input type="text" class="form-control" value="<?php echo e($d["fname"]) ?>" id="fname">
                         </div>
                         <div class="col-6">
                             <label for="" class="form-label">Last Name :</label>
-                            <input type="text" class="form-control" value="<?php echo $d["lname"] ?>" id="lname">
+                            <input type="text" class="form-control" value="<?php echo e($d["lname"]) ?>" id="lname">
                         </div>
                     </div>
 
                     <div class="mt-3">
                         <label for="" class="form-label">Email :</label>
-                        <input type="text" class="form-control" value="<?php echo $d["email"] ?>" disabled>
+                        <input type="text" class="form-control" value="<?php echo e($d["email"]) ?>" disabled>
                     </div>
                     <div class="mt-3">
                         <label for="" class="form-label">Mobile :</label>
-                        <input type="text" class="form-control" value="<?php echo $d["mobile"] ?>" id="mobile">
+                        <input type="text" class="form-control" value="<?php echo e($d["mobile"]) ?>" id="mobile">
                     </div>
                     <div class="row mt-3">
                         <div class="col-6">
                             <label for="" class="form-label">Username :</label>
-                            <input type="text" class="form-control" value="<?php echo $d["username"] ?>" disabled>
+                            <input type="text" class="form-control" value="<?php echo e($d["username"]) ?>" disabled>
                         </div>
                         <div class="col-6">
                             <label for="" class="form-label">Password :</label>
-                            <input type="password" class="form-control" value="<?php echo $d["password"] ?>" id="pw">
+                            <input type="password" class="form-control" value="<?php echo e($d["password"]) ?>" id="pw">
                         </div>
                     </div>
 
@@ -102,16 +102,16 @@ if (isset($_SESSION["u"])) {
                     <div class="row mt-4">
                         <div class="col-3">
                             <label for="" class="form-label">No :</label>
-                            <input type="text" class="form-control" value="<?php echo $d["no"] ?>" id="no">
+                            <input type="text" class="form-control" value="<?php echo e($d["no"]) ?>" id="no">
                         </div>
                         <div class="col-9">
                             <label for="" class="form-label">Line 01 :</label>
-                            <input type="text" class="form-control" value="<?php echo $d["line_1"] ?>" id="line1">
+                            <input type="text" class="form-control" value="<?php echo e($d["line_1"]) ?>" id="line1">
                         </div>
                     </div>
                     <div class="mt-3 mb-3">
                         <label for="" class="form-label">Line 02 :</label>
-                        <input type="text" class="form-control" value="<?php echo $d["line_2"] ?>" id="line2">
+                        <input type="text" class="form-control" value="<?php echo e($d["line_2"]) ?>" id="line2">
                     </div>
                     <div class="d-none" id="msgDiv2" onclick="reload();">
                         <div class="alert alert-danger" id="msg2"></div>

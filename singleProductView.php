@@ -173,36 +173,36 @@ if (isset($stockId)) {
                 <div class="container7">
                     <div class="col-12 shadow-lg p-5">
                         <div class="col-10 ms-2 mt-0">
-                            <h1><?php echo $d["name"] ?></h1>
-                            <h4 class="mt-3">- <?php echo $d["cat_name"] ?> -</h4>
+                            <h1><?php echo e($d["name"]) ?></h1>
+                            <h4 class="mt-3">- <?php echo e($d["cat_name"]) ?> -</h4>
                         </div>
                         <div class="col-10 row">
                             <div class="col-5 mt-3">
                                 <div class="product-image">
-                                    <img src="<?php echo $d["path"] ?>" alt="Product Image">
+                                    <img src="<?php echo e($d["path"]) ?>" alt="Product Image">
                                 </div>
                             </div>
                             <div class="col-7 yi shadow-lg bg-gradient rounded-4 p-5 mb-2">
-                                <h4 class="mt-3 text-warning">Brand : &nbsp;<?php echo $d["brand_name"] ?></h4>
-                                <h4 class="mt-3">Color : &nbsp;<?php echo $d["color_name"] ?></h4>
-                                <h4 class="mt-3">Series : &nbsp;<?php echo $d["series_name"] ?></h4>
-                                <h4 class="mt-4 mb-4"><?php echo $d["description"] ?></h4>
+                                <h4 class="mt-3 text-warning">Brand : &nbsp;<?php echo e($d["brand_name"]) ?></h4>
+                                <h4 class="mt-3">Color : &nbsp;<?php echo e($d["color_name"]) ?></h4>
+                                <h4 class="mt-3">Series : &nbsp;<?php echo e($d["series_name"]) ?></h4>
+                                <h4 class="mt-4 mb-4"><?php echo e($d["description"]) ?></h4>
 
                                 <div class="row mt-5">
                                     <div class="col-3">
                                         <input type="text" placeholder="Quantity" class="form-control mb-4" id="qty">
                                     </div>
                                     <div class="col-6 mt-2 ms-0">
-                                        <h6 class="text-warning">Available Quantity : <?php echo $d["qty"] ?></h6>
+                                        <h6 class="text-warning">Available Quantity : <?php echo e($d["qty"]) ?></h6>
                                     </div>
                                 </div>
 
-                                <h1 class="mb-2"><?php echo $d["price"] ?> LKR</h1>
+                                <h1 class="mb-2"><?php echo e($d["price"]) ?> LKR</h1>
                                 <div class="d-flex justify-content-center mt-4">
                                     <button class="btn btn-outline-light col-6"
-                                        onclick="addtoCart('<?php echo $d['stock_id'] ?>');">Add to Cart</button>
+                                        onclick="addtoCart('<?php echo e($d['stock_id']) ?>');">Add to Cart</button>
                                     <button class="btn btn-outline-warning col-6 ms-2"
-                                        onclick="buyNow('<?php echo $d['stock_id'] ?>');">Buy Now</button>
+                                        onclick="buyNow('<?php echo e($d['stock_id']) ?>');">Buy Now</button>
                                 </div>
                             </div>
                         </div>

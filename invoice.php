@@ -1,11 +1,18 @@
-﻿<?php
+<?php
 
 include_once __DIR__ . "/includes/connection.php";
 session_start();
-$user = $_SESSION["u"];
-$orderHistoryId = $_GET["orderId"];
 
-$rs = Database::search("SELECT * FROM `order_history` WHERE `ohid` = '" . $orderHistoryId . "'");
+if (!isset($_SESSION["u"])) {
+    header("Location: signIn.php");
+    exit();
+}
+
+$user = $_SESSION["u"];
+$userId = intval($user["id"]);
+$orderHistoryId = isset($_GET["orderId"]) ? intval($_GET["orderId"]) : 0;
+
+$rs = Database::search("SELECT * FROM `order_history` WHERE `ohid` = '" . $orderHistoryId . "' AND `user_id` = '" . $userId . "'");
 $num = $rs->num_rows;
 
 if ($num > 0) {
@@ -36,8 +43,8 @@ if ($num > 0) {
 
                     <div class="col-6 d-flex justify-content-end">
                         <p>
-                            <strong style="font-size: 30px;">Invoice #: <?php echo $d["order_id"] ?></strong><br>
-                            Date : <?php echo $d["order_date"] ?>
+                            <strong style="font-size: 30px;">Invoice #: <?php echo e($d["order_id"]) ?></strong><br>
+                            Date : <?php echo e($d["order_date"]) ?>
                         </p>
                     </div>
                 </div>
@@ -54,8 +61,8 @@ if ($num > 0) {
                     <div class="col-6 text-end pe-4">
                         <h5 class="pe-4">To:</h5>
                         <p class="d-flex justify-content-end">
-                            <?php echo $user["fname"] ?>     <?php echo $user["lname"] ?><br>
-                            <?php echo $user["mobile"] ?><br>
+                            <?php echo e($user["fname"]) ?>     <?php echo e($user["lname"]) ?><br>
+                            <?php echo e($user["mobile"]) ?><br>
                         </p>
 
                     </div>
@@ -102,9 +109,9 @@ if ($num > 0) {
                                     ?>
 
                                     <tr>
-                                        <td><?php echo $d2["name"] ?></td>
-                                        <td><?php echo $d2["oi_qty"] ?></td>
-                                        <td><?php echo ($d2["price"] * $d2["oi_qty"]) ?> LKR</td>
+                                        <td><?php echo e($d2["name"]) ?></td>
+                                        <td><?php echo e($d2["oi_qty"]) ?></td>
+                                        <td><?php echo e($d2["price"] * $d2["oi_qty"]) ?> LKR</td>
                                     </tr>
 
                                     <?php
@@ -117,9 +124,9 @@ if ($num > 0) {
                     </div>
 
                     <div class="text-end mt-5 pe-5">
-                        <h6>Number of Items : <span class="text-muted"><?php echo $num2 ?></span></h6>
+                        <h6>Number of Items : <span class="text-muted"><?php echo e($num2) ?></span></h6>
                         <h5 class="mt-3">Delivery Fee : <span class="text-muted">1000 LKR</span></h5>
-                        <h3 class="mt-4">Net Total : <span class="text-black"><?php echo $d["amount"] ?> LKR </span></h3>
+                        <h3 class="mt-4">Net Total : <span class="text-black"><?php echo e($d["amount"]) ?> LKR </span></h3>
                     </div>
                 </div>
             </div>

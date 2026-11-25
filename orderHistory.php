@@ -56,8 +56,8 @@ if (isset($_SESSION["u"])) {
                         <!-- order history card -->
                         <div class="p-3 border border-3 rounded-3 bg-body-tertiary mb-5">
                             <div>
-                                <h5>Order ID : <span class="text-info">#<?php echo $d["order_id"] ?></span> </h5>
-                                <p><?php echo $d["order_date"] ?></p>
+                                <h5>Order ID : <span class="text-info">#<?php echo e($d["order_id"]) ?></span> </h5>
+                                <p><?php echo e($d["order_date"]) ?></p>
                             </div>
 
                             <div class="ps-5 pe-5 mt-4">
@@ -83,8 +83,8 @@ if (isset($_SESSION["u"])) {
                                             $d2 = $rs2->fetch_assoc();
                                             ?>
                                             <tr>
-                                                <td><?php echo $d2["name"] ?></td>
-                                                <td><?php echo $d2["oi_qty"] ?></td>
+                                                <td><?php echo e($d2["name"]) ?></td>
+                                                <td><?php echo e($d2["oi_qty"]) ?></td>
                                                 <td><?php echo ($d2["price"] * $d2["oi_qty"]) ?> LKR</td>
 
                                             </tr>
@@ -99,7 +99,7 @@ if (isset($_SESSION["u"])) {
 
                             <div class="d-flex flex-column align-items-end pe-5 mt-2">
                                 <h5>Delivery Fee : <span class="text-muted">1000 LKR</span></h5>
-                                <h3>Net Total : <span class="text-warning"><?php echo $d["amount"] ?> LKR</span></h3>
+                                <h3>Net Total : <span class="text-warning"><?php echo e($d["amount"]) ?> LKR</span></h3>
                             </div>
 
                         </div>
