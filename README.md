@@ -60,7 +60,7 @@ SuperBazaar/
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/SuperBazaar.git
+git clone https://github.com/Amiru-dev/SuperBazaar.git
 cd SuperBazaar
 ```
 Place (or symlink) the project inside your web server root (e.g., `htdocs/SuperBazaar`).
