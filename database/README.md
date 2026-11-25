@@ -7,6 +7,7 @@ This directory contains the MySQL database scripts for the SuperBazaar e-commerc
 | File | Description |
 |------|-------------|
 | `superbazaar_full_setup.sql` | Full setup — drops & recreates the database, all tables, and seeds all data |
+| `superbazaar.mwb` | MySQL Workbench EER diagram model |
 | `README.md` | This documentation |
 
 ## Quick Setup
