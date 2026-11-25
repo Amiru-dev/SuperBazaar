@@ -1,5 +1,7 @@
 ﻿<?php
 
+require_once __DIR__ . "/../includes/adminAuth.php";
+
 include_once __DIR__ . "/../includes/connection.php";
 
 $report = isset($_POST["report"]) ? intval($_POST["report"]) : 1;

@@ -1,5 +1,7 @@
 ﻿<?php
 
+require_once __DIR__ . "/../includes/adminAuth.php";
+
 include_once __DIR__ . "/../includes/connection.php";
 
 $rs = Database::search("SELECT * FROM `user` WHERE `user_type_id` = '2'");
@@ -10,12 +12,24 @@ for ($i = 0; $i < $num; $i++) {
     ?>
 
     <tr>
-        <th scope="row"><?php echo $d["id"] ?></th>
-        <td><?php echo $d["fname"] ?></td>
-        <td><?php echo $d["lname"] ?></td>
-        <td><?php echo $d["email"] ?></td>
-        <td><?php echo $d["mobile"] ?></td>
+        <th scope="row"><?php
+
+require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["id"] ?></th>
         <td><?php
+
+require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["fname"] ?></td>
+        <td><?php
+
+require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["lname"] ?></td>
+        <td><?php
+
+require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["email"] ?></td>
+        <td><?php
+
+require_once __DIR__ . "/../includes/adminAuth.php"; echo $d["mobile"] ?></td>
+        <td><?php
+
+require_once __DIR__ . "/../includes/adminAuth.php";
         if ($d["status"] == 1) {
             echo ("Active");
         } else {
@@ -26,6 +40,8 @@ for ($i = 0; $i < $num; $i++) {
     </tr>
 
     <?php
+
+require_once __DIR__ . "/../includes/adminAuth.php";
 
 }
 
