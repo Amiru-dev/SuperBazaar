@@ -23,11 +23,6 @@
                                     <span style="">Reset Password</span>
                                 </a>
                             </div>
-                            <div>
-                                <img src="https://scontent.xx.fbcdn.net/v/t39.30808-6/306753727_143320678408497_8267722658787640596_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGkMzHcFO0E4kvRf8nCeBmIfuTqtWGLlCl-5Oq1YYuUKQA344oDjW_AKemnFHJioHIoJ0HyWQ4MivhtSqSPfcXF&_nc_ohc=YxYtqFbFsTYQ7kNvgE0s46x&_nc_ht=scontent.xx&oh=00_AYAIwueHXY2Uh2Y662VlfyZytbtf6umR93B1XVTG3hs_AA&oe=66671813"
-                                    style="max-width: 500px; max-height: 400px; margin-left: 20%; margin-top: 7%;">
-
-                            </div>
 
                             <p style="margin-top: 24px;">If you didn\'t ask to reset your password, you can ignore this
                                 email.</p>
