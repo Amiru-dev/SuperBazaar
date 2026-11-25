@@ -22,7 +22,7 @@ A full-stack PHP & MySQL e-commerce web application for browsing and purchasing 
 
 ## Tech Stack
 
-- **Backend:** PHP 8.x (`mysqli`), PHPMailer
+- **Backend:** PHP 8.2 (`mysqli`), PHPMailer
 - **Database:** MySQL 8.0
 - **Frontend:** HTML5, CSS3, Bootstrap 5.3, Bootstrap Icons, SweetAlert2, Chart.js
 - **Payments:** PayHere JS SDK (Sandbox)
