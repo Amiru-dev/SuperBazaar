@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Route any non-existent file or directory (including missing .php URLs) to 404.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ 404.php [L]
+
+ErrorDocument 404 /SuperBazaar/404.php
