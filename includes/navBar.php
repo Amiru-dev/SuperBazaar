@@ -1,8 +1,7 @@
-﻿<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand a1 mb-0 ms-5" href="index.php">
-            <img src="assets/img/logo.svg" height="50" class="me-4">
-            SuperBazaar</a>
+        <a class="navbar-brand mb-0 ms-5" href="index.php" style="font-family: HACKED, sans-serif; font-size: 2rem; letter-spacing: 2px; color: #fff; font-weight: normal;">
+            Super<span style="color: orange;">Bazaar</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
