@@ -13,7 +13,7 @@ This directory contains the MySQL database scripts for the SuperBazaar e-commerc
 
 ### Option 1: MySQL Command Line
 ```bash
-mysql -u root -p < "c:\Users\ASUS\Documents\SuperBazaar\database\superbazaar_full_setup.sql"
+mysql -u root -p < database/superbazaar_full_setup.sql
 ```
 
 ### Option 2: MySQL Workbench
@@ -60,9 +60,9 @@ superbazaar
 
 ## Connection Settings
 
-Configured in `connection.php`:
-- **Host:** localhost
-- **User:** root
-- **Password:** YOUR_MYSQL_PASSWORD
-- **Database:** superbazaar
-- **Port:** 3306
+Copy `config.example.php` to `config.php` in the project root and set your credentials (`includes/connection.php` loads `config.php`):
+- **DB_HOST:** localhost
+- **DB_USER:** root
+- **DB_PASS:** YOUR_MYSQL_PASSWORD
+- **DB_NAME:** superbazaar
+- **DB_PORT:** 3306
