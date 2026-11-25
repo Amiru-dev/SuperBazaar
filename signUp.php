@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -61,7 +61,7 @@
                 <div class="alert alert-danger" id="msg3"></div>
             </div>
             <div class="centered-button">
-                <button type="submit" class="btn btn-primary btn-block mt-0 col-12" onclick="signUp();">Sign Up</button>
+                <button type="button" class="btn btn-primary btn-block mt-0 col-12" onclick="signUp();">Sign Up</button>
             </div>
         </form>
     </div>

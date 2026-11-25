@@ -1,4 +1,4 @@
-﻿const APP_BASE = '';
+const APP_BASE = '';
 const ADMIN_BASE = 'admin/';
 
 function signUp() {
@@ -21,10 +21,10 @@ function signUp() {
 
     request.onreadystatechange = function () {
         if (request.readyState == 4 && request.status == 200) {
-            var response = request.responseText;
+            var response = request.responseText.trim();
 
             if (response == "Success") {
-                document.getElementById("msg3").innerHTML = "Registration Successful";
+                document.getElementById("msg3").innerHTML = "Registration Successful! Redirecting to Sign In...";
                 document.getElementById("msg3").className = "alert alert-success";
                 document.getElementById("msgDiv3").className = "d-block";
 
@@ -35,11 +35,14 @@ function signUp() {
                 username.value = "";
                 password.value = "";
 
-                window.location = APP_BASE + "signIn.php";
+                setTimeout(function () {
+                    window.location = APP_BASE + "signIn.php";
+                }, 1200);
 
             } else {
 
                 document.getElementById("msg3").innerHTML = response;
+                document.getElementById("msg3").className = "alert alert-danger";
                 document.getElementById("msgDiv3").className = "d-block";
             }
         }
