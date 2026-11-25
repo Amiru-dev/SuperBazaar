@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div class="b3">
         <nav class="navbar navbar-custom">
             <div class="container">
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Sign-Up Form -->
-    <div class="container mt-2">
+    <div class="container mt-2 pb-4 flex-grow-1">
         <h1 class="text-center">Sign Up</h1>
         <p class="text-center mt-3">Already have an account? <a href="signIn.php" class="a3">Sign In</a></p>
         <form>
@@ -67,7 +67,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-2 mt-2 fixed-bottom">
+    <footer class="bg-dark text-light text-center py-2 mt-auto">
         &copy; 2024 SuperBazaar || All rights reserved.
     </footer>
     <!-- Footer -->
