@@ -1,0 +1,13 @@
+# Local configuration with real credentials
+config.php
+.env
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs & temporary files
+*.log
